@@ -14,3 +14,6 @@ def shop(request):
 
 def news(request):
     return render(request, 'third_task/news.html')
+
+def cart(request):
+    return render(request, 'third_task/cart.html')
