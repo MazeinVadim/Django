@@ -3,14 +3,26 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'third_task/index.html')
 
-def shop(request):
-    items = {
-        "item1": "Игра A",
-        "item2": "Игра B",
-        "item3": "Игра C",
+def about(request):
+    team_members = [
+        {
+            'name': 'Иван',
+            'buttons': ['Кнопка 1', 'Кнопка 2'],
+        },
+        {
+            'name': 'Мария',
+            'buttons': ['Кнопка A', 'Кнопка B', 'Кнопка C'],
+        },
+        {
+            'name': 'Петр',
+            'buttons': ['Кнопка X'],
+        },
+    ]
+    context = {
+        'team_members': team_members,
     }
-    context = {"items": items}
-    return render(request, 'third_task/shop.html', context)
+    return render(request, 'third_task/about.html', context)
 
-def news(request):
-    return render(request, 'third_task/news.html')
+def catalog(request):
+    return render(request, 'third_task/catalog.html')
+

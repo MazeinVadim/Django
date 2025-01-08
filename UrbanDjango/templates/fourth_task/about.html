@@ -1,0 +1,15 @@
+<{% extends 'fourth_task/menu.html' %}
+
+{% block pagename %}О нас{% endblock %}
+
+{% block content %}
+    <h1>О нас</h1>
+    <p>Мы - команда энтузиастов, создающих 3D-модели для GameDev.</p>
+     <h2>Наши любимые игры:</h2>
+     <ul>
+          {% for game in games %}
+              <li>{{ game }}</li>
+          {% endfor %}
+     </ul>
+    <a href="/"><button>На главную</button></a>
+{% endblock %}
